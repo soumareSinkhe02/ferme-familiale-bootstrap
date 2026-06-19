@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soumare & Fils - Accueil</title>
+    <link href="./css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top shadow-sm py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4" href="#index.html">🌾 Soumare & Fils</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-2">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Accuil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="produits.html">Nos Produits</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact & Commandes</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- SECTION HERO (Présentation) -->
+    <header class="bg-white py-5 border-bottom">
+        <div class="container py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <span class="badge bg-success-subtle text-success mb-3 px-3 py-2 fw-semibold">Entreprise
+                        Familiale</span>
+                    <h1 class="display-5 fw-bold text-dark mb-3">Notre passion pour la terre et l'élevage</h1>
+                    <p class="lead text-muted mb-4">Depuis des générations, notre famille cultive des terres saines et
+                        élève ses animaux avec respect pour vous offrir des produits locaux de qualité supérieure.</p>
+                    <div class="d-flex gap-3">
+                        <a href="produits.html" class="btn btn-success btn-lg px-4 shadow-sm">Voir la boutique</a>
+                        <button type="button" class="btn btn-outline-success btn-lg px-4" data-bs-toggle="modal"
+                            data-bs-target="#modalHoraires">
+                            Nos Horaires
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="./images/ferme.png" class="img-fluid rounded-3 shadow" alt="Ferme Familiale">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="container py-5 my-4">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm p-3">
+                    <div class="card-body text-center">
+                        <div class="fs-1 mb-3">🥛</div>
+                        <h3 class="card-title h5 fw-bold">Élevage Local</h3>
+                        <p class="card-text text-muted small">Des animaux élevés en plein air au cœur de nos prairies
+                            familiales.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm p-3">
+                    <div class="card-body text-center">
+                        <div class="fs-1 mb-3">🌱</div>
+                        <h3 class="card-title h5 fw-bold">100% Naturel</h3>
+                        <p class="card-text text-muted small">Des cultures de saison sans produits chimiques de synthèse
+                            agressifs.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm p-3">
+                    <div class="card-body text-center">
+                        <div class="fs-1 mb-3">🛒</div>
+                        <h3 class="card-title h5 fw-bold">Circuit Court</h3>
+                        <p class="card-text text-muted small">Du producteur directement au consommateur, sans aucun
+                            intermédiaire.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="modalHoraires" tabindex="-1" aria-labelledby="modalHorairesLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title fw-bold" id="modalHorairesLabel">Horaires d'ouverture de la ferme</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-toggle="modal"
+                        data-bs-target="#modalHoraires" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="mb-2"><strong>Lundi au Vendredi :</strong> 8h00 - 18h00</p>
+                    <p class="mb-2"><strong>Samedi :</strong> 9h00 - 13h00</p>
+                    <p class="text-danger small mb-0">⚠️ Fermé le Dimanche et les jours fériés.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white-50 text-center py-4 mt-5">
+        <div class="container"><small>&copy; 2026 Soumare & Fils. Projet Validation Bootstrap.</small></div>
+    </footer>
+
+    <script src="./js/bootstrap.js"></script>
+</body>
+
+</html>
