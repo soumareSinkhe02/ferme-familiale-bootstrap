@@ -40,11 +40,16 @@
             <h1 class="fw-bold text-success">Nos Produits Frais</h1>
             <p class="text-muted">Directement récoltés et préparés sur notre exploitation familiale</p>
         </div>
+        <div class="alert alert-warning alert-dismissible fade show shadow-sm text-start" role="alert">
+            <strong>🌾 Info récolte :</strong> Les panier de légumes de cette semaine contient nos premières tomates de
+            saison ! Pensez à réserver tot.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
         <div class="row row-cols-1 row-cols-md-3 g-4">
             <div class="col">
                 <div class="card h-100 border-0 shadow-sm overflow-hidden">
-                    <img src="./images/lait_frais.jpg" class="card-img-top" alt="Lait Frais"
-                        style="height: 200px; object-fit: cover;">
+                    <img src="./images/lait_frais.jpg" class="card-img-top" alt="Lait Frais" data-bs-toggle="modal"
+                        data-bs-target="#modalLait" style="height: 200px; object-fit: cover; cursor: pointer;">
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center mb-2">
                             <h5 class="card-title fw-bold mb-0">Lait Frais Entier</h5>
@@ -61,8 +66,8 @@
             </div>
             <div class="col">
                 <div class="card h-100 border-0 shadow-sm overflow-hidden">
-                    <img src="./images/panier_legume.png" class="card-img-top" alt="Légumes"
-                        style="height: 200px; object-fit: cover;">
+                    <img src="./images/panier_legume.png" class="card-img-top" alt="Légumes" data-bs-toggle="modal"
+                        data-bs-target="#modalLegumes" style="height: 200px; object-fit: cover; cursor: pointer;">
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center mb-2">
                             <h5 class="card-title fw-bold mb-0">Panier de Légumes</h5>
@@ -77,12 +82,10 @@
                     </div>
                 </div>
             </div>
-
-            <!-- PRODUIT 3 -->
             <div class="col">
                 <div class="card h-100 border-0 shadow-sm overflow-hidden">
-                    <img src="./images/oeufs.jpg" class="card-img-top" alt="Œufs"
-                        style="height: 200px; object-fit: cover;">
+                    <img src="./images/oeufs.jpg" class="card-img-top" alt="Œufs" data-bs-toggle="modal"
+                        data-bs-target="#modalOeufs" style="height: 200px; object-fit: cover; cursor: pointer;">
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center mb-2">
                             <h5 class="card-title fw-bold mb-0">Œufs de Plein Air</h5>
@@ -103,6 +106,81 @@
     <footer class="bg-dark text-white-50 text-center py-4 mt-5">
         <div class="container"><small>&copy; 2026 Soumare & Fils. Projet Validation Bootstrap.</small></div>
     </footer>
+
+    <div class="modal fade" id="modalLait" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title fw-bold">Notre Lait de Ferme</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-start">
+                    <p><strong>Origine :</strong> 100% issu de notre élevage familial Soumaré.</p>
+                    <p><strong>Qualité :</strong> Nos vaches sont nourries exclusivement à l'herbe de nos paturages et
+                        avec du foin produit sur l'exploitation.</p>
+                    <p class="mb-0 text-muted small">Mis en bouteille chaque matin immédiatement après la traite pour
+                        garantir
+                        une
+                        fraicheur absolue.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalLegumes" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title fw-bold">🍒Détails : Panier de Légumes</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-start">
+                    <p><strong>Composition de la semaine :</strong> Pommes de terre, carottes, poireaux, salades et
+                        oignons selon la recolte du matin.</p>
+                    <p><strong>Culture :</strong> Légumes de saison cultivés de manière écoresponsable, ramassés à la
+                        main par notre famille.</p>
+                    <p class="mb-0 text-muted small">Poids moyen garanti : 5 kg de fraicher absolue.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalOeufs" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-white">
+                    <h5 class="modal-title fw-bold">⚠️ Prouit indisponible</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-start">
+                    <div class="alert alert-danger border-0 mb-3" role="alert">
+                        <strong>Rupture de stock temporaire !</strong> Nos poules sont actuellement en période de mue
+                        naturelle, la production est ralentie.
+                    </div>
+                    <div>
+                        <p><strong>Descriptif :</strong> Nos oeufs proviennent de poules élevées en plein air, nourries
+                            aux céréales de la ferme sans OGM.</p>
+                        <p class="mb-0 text-muted small">Le stock sera réapprovisonné automatiquement d'ici le début de
+                            la semaine prochaine</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="./js/bootstrap.js"></script>
 </body>
