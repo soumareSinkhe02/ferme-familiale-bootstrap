@@ -25,8 +25,9 @@
                         <button class="btn btn-warning position-relative fw-bold shadow-sm">
                             🛒 Panier
                             <span
-                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                                2
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger d-none"
+                                id="compteur-panier">
+                                0
                                 <span class="visually-hidden">articles dans le panier</span>
                             </span>
                         </button>
@@ -45,14 +46,24 @@
             saison ! Pensez à réserver tot.
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-            <div class="col">
+        <!-- Barre de recherche (Centre avec max-width) -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-6">
+                <div class="input-group shadow-sm">
+                    <span class="input-group-text bg-white border-end-0 text-muted">🔍</span>
+                    <input type="text" id="champ-recherche" class="form-control border-start-0 py-2"
+                        placeholder="Rechercher un produit (lait, légumes...)...">
+                </div>
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 g-4" id="grille-produits">
+            <!--<div class="col carte-produit">
                 <div class="card h-100 border-0 shadow-sm overflow-hidden">
                     <img src="./images/lait_frais.jpg" class="card-img-top" alt="Lait Frais" data-bs-toggle="modal"
                         data-bs-target="#modalLait" style="height: 200px; object-fit: cover; cursor: pointer;">
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center mb-2">
-                            <h5 class="card-title fw-bold mb-0">Lait Frais Entier</h5>
+                            <h5 class="card-title fw-bold mb-0 nom-produit">Lait Frais Entier</h5>
                             <span class="badge bg-success">Disponible</span>
                         </div>
                         <p class="card-text text-muted small">Bouteille de 1L de lait frais de notre propre élevage
@@ -64,31 +75,31 @@
                     </div>
                 </div>
             </div>
-            <div class="col">
+            <div class="col carte-produit">
                 <div class="card h-100 border-0 shadow-sm overflow-hidden">
                     <img src="./images/panier_legume.png" class="card-img-top" alt="Légumes" data-bs-toggle="modal"
                         data-bs-target="#modalLegumes" style="height: 200px; object-fit: cover; cursor: pointer;">
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center mb-2">
-                            <h5 class="card-title fw-bold mb-0">Panier de Légumes</h5>
+                            <h5 class="card-title fw-bold mb-0 nom-produit">Panier de Légumes</h5>
                             <span class="badge bg-success">Disponible</span>
                         </div>
                         <p class="card-text text-muted small">Assortiment de 5kg de légumes frais et bios récoltés ce
                             matin.</p>
                         <div class="d-flex justify-content-between align-items-center mt-3">
-                            <span class="fw-bold text-dark fs-5">10 00 FCFA</span>
+                            <span class="fw-bold text-dark fs-5">10 000 FCFA</span>
                             <button class="btn btn-outline-success btn-sm">Ajouter au panier</button>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col">
+            <div class="col carte-produit">
                 <div class="card h-100 border-0 shadow-sm overflow-hidden">
                     <img src="./images/oeufs.jpg" class="card-img-top" alt="Œufs" data-bs-toggle="modal"
                         data-bs-target="#modalOeufs" style="height: 200px; object-fit: cover; cursor: pointer;">
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center mb-2">
-                            <h5 class="card-title fw-bold mb-0">Œufs de Plein Air</h5>
+                            <h5 class="card-title fw-bold mb-0 nom-produit">Œufs de Plein Air</h5>
                             <span class="badge bg-danger">En Rupture</span>
                         </div>
                         <p class="card-text text-muted small">Boîte de 12 œufs extra-frais pondus par nos poules élevées
@@ -100,7 +111,7 @@
                     </div>
                 </div>
             </div>
-
+-->
         </div>
     </div>
     <footer class="bg-dark text-white-50 text-center py-4 mt-5">
@@ -183,6 +194,7 @@
     </div>
 
     <script src="./js/bootstrap.js"></script>
+    <script src="./app.js"></script>
 </body>
 
 </html>
